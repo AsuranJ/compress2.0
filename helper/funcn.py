@@ -17,7 +17,7 @@ from .config import *
 COUNT = []
 
 uptime = dt.now()
-os.system("wget https://telegra.ph/file/75ee20ec8d8c8bba84f02.jpg")
+os.system("wget https://telegra.ph/file/3555804365a1ad64f493e.jpg")
 
 if not os.path.isdir("downloads/"):
     os.mkdir("downloads/")
@@ -76,7 +76,7 @@ async def progress(current, total, event, start, type_of_ps, file=None):
     diff = now - start
     if round(diff % 10.00) == 0 or current == total:
         percentage = current * 100 / total
-        speed = current / diff
+        speed = current / diff * 5
         time_to_completion = round((total - current) / speed) * 1000
         progress_str = "`[{0}{1}] {2}%`\n\n".format(
             "".join(["𒊹︎︎︎" for i in range(math.floor(percentage / 5))]),
