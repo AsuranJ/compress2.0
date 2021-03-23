@@ -88,7 +88,7 @@ async def encc(e):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact JAsuran")
             return
     except:
         pass
@@ -100,7 +100,7 @@ async def encc(e):
     ds = await e.client.send_file(
         e.chat_id,
         file=f"{out}",
-        force_document=True,
+        force_document=false,
         thumb=thum,
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
             progress(d, t, nnn, ttt, "uploading..", file=f"{out}")
@@ -196,7 +196,7 @@ async def encod(event):
     # if (user.id) not in pp:
     #    return await xxx.edit(
     #        "U Must Subscribe This Channel To Use This Bot",
-    #        buttons=[Button.url("JOIN CHANNEL", url="t.me/BoTT_inFo")],
+    #        buttons=[Button.url("JOIN CHANNEL", url="t.me/SerialCoIn")],
     #    )
     if len(COUNT) > 4 and user.id != OWNER:
         llink = (await event.client(cl(LOG))).link
@@ -229,7 +229,7 @@ async def encod(event):
     rr = f"encode/{user.id}"
     if not os.path.isdir(rr):
         os.mkdir(rr)
-    bb = kk.replace(f".{aa}", " compressed.mkv")
+    bb = kk.replace(f".{aa}", " compressed.mp4")
     out = f"{rr}/{bb}"
     thum = "75ee20ec8d8c8bba84f02.jpg"
     dtime = ts(int((es - s).seconds) * 1000)
@@ -270,7 +270,7 @@ async def customenc(e, key):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact JAsuran")
             return
     except:
         pass
@@ -282,7 +282,7 @@ async def customenc(e, key):
     ds = await e.client.send_file(
         e.chat_id,
         file=f"{out}",
-        force_document=True,
+        force_document=false,
         thumb=thum,
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
             progress(d, t, nnn, ttt, "uploading..", file=f"{out}")
