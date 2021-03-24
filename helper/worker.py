@@ -100,7 +100,7 @@ async def encc(e):
     ds = await e.client.send_file(
         e.chat_id,
         file=f"{out}",
-        force_document=False,
+        force_document=True,
         thumb=thum,
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
             progress(d, t, nnn, ttt, "uploading..", file=f"{out}")
@@ -282,7 +282,7 @@ async def customenc(e, key):
     ds = await e.client.send_file(
         e.chat_id,
         file=f"{out}",
-        force_document=False,
+        force_document=True,
         thumb=thum,
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
             progress(d, t, nnn, ttt, "uploading..", file=f"{out}")
